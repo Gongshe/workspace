@@ -15,7 +15,7 @@ public class MainActivity extends Activity {
     //private Integer[] imageIDs = {R.drawable.abc,R.drawable.abc};
     private String[] titleItems = {"双11购物攻略","海淀区一居室出租","西行漫记","ICID报名","北京视觉设计求职","《三体》人物原型细究"};
     private String[] dateItems ={"2013.11.05","2013.10.31","2013.10.24","2013.10.24","2013.10.24","2013.10.24"};
-    private String[] joinItems = {"43","143","43","43","43","43"};
+    private String[] joinItems = {"43","143","143","143","43","43"};
     private String[] authorItems ={"Allen","Quuee","Fling","King","Anna","Bobbie"};
     private String[] contentItems = {"双11将至，最全的购物攻略","大约14平米左右，未装修，三层，有空调",
     "西部两月徒步归来，分享心得","交互设计行业盛事，报名优惠条件","视觉设计求职，三年工作经验，看看简历","视觉设计求职，三年工作经验，看看简历"};
