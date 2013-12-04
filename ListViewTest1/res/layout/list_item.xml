@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+        >
+      <ImageView android:id="@+id/listitem"
+                   android:layout_width="fill_parent"
+                   android:layout_height="wrap_content"
+                   android:src="@drawable/listitem"
+                   android:scaleType="fitXY"
+                   />
+           <TextView android:id="@+id/titleItem"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_alignTop="@+id/listitem"
+                     android:layout_alignLeft="@+id/listitem"
+                     android:layout_marginTop="5dp"
+                     android:layout_marginLeft="5dp"
+                     android:textScaleX="1.3"
+                     android:textColor="#000000"
+                     android:singleLine="true"
+                     android:textSize="12sp" />
+
+           <TextView android:id="@+id/dateItem"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_alignTop="@+id/listitem"
+                     android:layout_alignLeft="@+id/listitem"
+                     android:layout_marginTop="22dp"
+                     android:layout_marginLeft="5dp"
+                     android:textScaleX="1.2"
+                     android:textColor="#000000"
+                     android:textSize="10sp" />
+
+               <TextView android:id="@+id/joinItem"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_alignTop="@+id/listitem"
+                         android:layout_alignLeft="@+id/listitem"
+                         android:layout_marginTop="22dp"
+                         android:layout_marginLeft="93dp"
+                         android:textScaleX="1.2"
+                         android:textColor="#000000"
+                         android:textSize="10sp" />
+               <TextView android:id="@+id/authorItem"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_alignTop="@+id/listitem"
+                         android:layout_alignLeft="@+id/listitem"
+                         android:layout_marginTop="22dp"
+                         android:layout_marginLeft="135dp"
+                         android:textScaleX="1.2"
+                         android:textColor="#000000"
+                         android:textSize="10sp" />
+
+           <TextView android:id="@+id/contentItem"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_alignTop="@+id/listitem"
+                     android:layout_alignLeft="@+id/listitem"
+                     android:layout_marginTop="43dp"
+                     android:layout_marginLeft="5dp"
+                     android:textScaleX="1.3"
+                     android:textColor="#000000"
+                     android:singleLine="true"
+                     android:textSize="11sp" />
+</RelativeLayout>
