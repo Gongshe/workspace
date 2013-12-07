@@ -6,7 +6,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.List;
@@ -34,19 +33,19 @@ public class ListViewAdapter extends BaseAdapter {
         this.listItems = listItems;
     }
 
-    public int getCount() {
+    public int getCount() {  //列表显示行数
         // TODO Auto-generated method stub
              return listItems.size();
          }
 
-    public Object getItem(int arg0) {
+    public Object getItem(int position) {
       // TODO Auto-generated method stub
-         return null;
+         return listItems.get(position);
        }
 
-    public long getItemId(int arg0) {
+    public long getItemId(int position) {
         // TODO Auto-generated method stub
-        return 0;
+        return position;
       }
 
 
@@ -57,7 +56,9 @@ public class ListViewAdapter extends BaseAdapter {
     {
         Log.e("method","getView");
         ListItemView listItemView = null;
-        if (convertView == null)
+
+        //防止重复操作，findViewById()方法也是比较耗时的，因此只调用一次
+        if (convertView == null)     // View的每次创建是比较耗时，因此对于getView方法传入convertView应充分利用！＝NULL 的判断
         {
             listItemView = new ListItemView();
             convertView = listContainer.inflate(R.layout.list_item,null);
@@ -69,7 +70,7 @@ public class ListViewAdapter extends BaseAdapter {
             listItemView.content = (TextView)convertView.findViewById(R.id.contentItem);
             convertView.setTag(listItemView);
         }
-        else
+        else  //ViewHolder的应用可以优化LISTVIEW。View的findViewById（）方法比较耗时，因此需要考虑 只调用一次，之后就用View.getTag()方法来获得ViewHolder对象
         {
             listItemView = (ListItemView)convertView.getTag();
         }
@@ -80,6 +81,17 @@ public class ListViewAdapter extends BaseAdapter {
         listItemView.join.setText((String)listItems.get(position).get("join"));
         listItemView.author.setText((String)listItems.get(position).get("author"));
         listItemView.content.setText((String)listItems.get(position).get("content"));
+
+       /* listItemView.title.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Log.i("Text", " u clicked on title Position"+ position);
+
+            }
+        });
+        */
+
         return convertView;
     }
 }
